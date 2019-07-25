@@ -42,11 +42,16 @@ export default class Post extends React.Component {
                         value={this.state.newCommentText}
                         onChange={this.handleTextChange}
                     />
-                    <button type="submit">Comentar</button>
+                    <button
+                        className="btn btn-outline-primary btn-sm"
+                        type="submit">Comentar
+                    </button>
                 </form>
 
                 { this.state.comments.map((comment, index) => {
-                    return <Comment key={index} text={comment.text} />
+                    if (comment.text !== '') {
+                        return <Comment key={index} text={comment.text} />
+                    }
                 }) }
             </div>
         );
