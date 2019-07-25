@@ -4,7 +4,7 @@ import Post from './Post';
 export default class App extends React.Component {
     render() {
         return (
-            <div>
+            <div className="container-fluid">
                 <h1>Hello Word</h1>
                 <Post title= "Aprendendo ReactJS com a RocketSeat"/>
                 <Post title= "ReactJS é de mais!"/>
